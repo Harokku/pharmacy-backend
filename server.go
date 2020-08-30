@@ -7,6 +7,7 @@ import (
 	_ "github.com/lib/pq"
 	"log"
 	"net/http"
+	"pharmacy-backend/handler"
 	"pharmacy-backend/utils"
 	"time"
 )
@@ -84,6 +85,7 @@ func main() {
 	e.GET("/ping", func(c echo.Context) error {
 		return c.NoContent(http.StatusOK)
 	})
+	e.POST("/login", handler.SignIn(conn, secret))
 
 	// -------------------------
 	// Run server
