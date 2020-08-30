@@ -13,3 +13,9 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# Goland ide
+.idea
+
+# Secret folder with non public files
+secret
